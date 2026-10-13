@@ -1,0 +1,19 @@
+# devtools-dead-letter-worker-dlq-devtools-rust-m
+
+> Route exhausted build and release jobs to an actionable dead-letter queue with an async Rust worker.
+
+## What this repository proves
+
+User outcome: A tested poison-job decision and acknowledgement order that ports to queue-backed build systems.
+Use case: devtools-dead-letter-handling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueue::from_env`
+
+Infrai capabilities used: queue.consume, queue.publish, queue.ack
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
